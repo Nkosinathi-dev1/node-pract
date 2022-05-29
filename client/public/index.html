@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+
+  </body>
+</html>
+
+<script>
+  function sayHi(x) {
+    alert(`say ${x}`)
+  }
+
+  function getValue(){
+        let unitType = document.querySelector('input[name="height_units"]:checked').value;
+        alert(unitType)
+        return unitType;
+  }
+  //Check Selected Unit
+
+  function LengthConverter(valNum, unitType) {
+    alert(valNum)
+    if (unitType === "cm") {
+      // CM to other Units
+      // 1 cm to Feet
+      document.getElementById("outputFeet").innerHTML = valNum * 0.032808;
+      // 2 cm to meters
+      document.getElementById("outputMeters").innerHTML = valNum / 100;
+      // 3 cm to Inches
+      document.getElementById("outputInches").innerHTML = valNum * 0.3937;
+      // 4 cm to Yards
+      document.getElementById("outputYards").innerHTML = valNum * 0.010936;
+      // 5 cm to KM
+      document.getElementById("outputKilometers").innerHTML =
+        valNum / 100000;
+      // 6 cm to Miles
+      document.getElementById("outputMiles").innerHTML =
+        valNum * 0.0000062137;
+    } else if (unitType === "feets") {
+      //Feet to other Units
+      //1 Feet to meters
+      document.getElementById("outputMeters").innerHTML = valNum / 3.2808;
+      //2 Feet to inches
+      document.getElementById("outputInches").innerHTML = valNum * 12;
+      // 3 Feet to cm
+      document.getElementById("outputcm").innerHTML = valNum / 0.032808;
+      //4 Feet to Yard
+      document.getElementById("outputYards").innerHTML = valNum * 0.33333;
+      // 5Feet to KM
+      document.getElementById("outputKilometers").innerHTML =
+        valNum / 3280.8;
+      //6 Feet to Miles
+      document.getElementById("outputMiles").innerHTML =
+        valNum * 0.00018939;
+    } else if (unitType === "meters") {
+      // Meters to other Units
+      //1  Meters to Feets
+      document.getElementById("outputFeet").innerHTML = valNum * 3.2808;
+      //2 Meters to Inches
+      document.getElementById("outputInches").innerHTML = valNum * 39.37;
+      //3 Meters to CM
+      document.getElementById("outputcm").innerHTML = valNum / 0.01;
+      //4 Meters to Yards
+      document.getElementById("outputYards").innerHTML = valNum * 1.0936;
+      // 5 Meters to Miles
+      document.getElementById("outputMiles").innerHTML =
+        valNum * 0.00062137;
+    } else if (unitType === "inches") {
+      //Inches to other Units
+      //1 Inches to Feet
+      document.getElementById("outputFeet").innerHTML = valNum * 0.083333;
+      //2 Inches to meters
+      document.getElementById("outputMeters").innerHTML = valNum / 39.37;
+      // 3 Inches to cm
+      document.getElementById("outputcm").innerHTML = valNum / 0.3937;
+      // 4 Inches to Yards
+      document.getElementById("outputYards").innerHTML = valNum * 0.027778;
+      // 5 Inches to KM
+      document.getElementById("outputKilometers").innerHTML =
+        valNum / 39370;
+      // 6 Inches to Miles
+      document.getElementById("outputMiles").innerHTML =
+        valNum * 0.000015783;
+    } else if (unitType === "yards") {
+      // Yards to other units
+      // 1 Yards to Feets
+      document.getElementById("outputFeet").innerHTML = valNum * 3;
+      // 2 Yards to Meters
+      document.getElementById("outputMeters").innerHTML = valNum / 1.0936;
+      // 3 Yards to Inches
+      document.getElementById("outputInches").innerHTML = valNum * 36;
+      // 4  Yards to CM
+      document.getElementById("outputcm").innerHTML = valNum / 0.010936;
+      // 5 Yards to KM
+      document.getElementById("outputKilometers").innerHTML =
+        valNum / 1093.6;
+      // 6 Yards to Miles
+      document.getElementById("outputMiles").innerHTML =
+        valNum * 0.00056818;
+    } else if (unitType === "km") {
+      // KM to others Units
+      // 1 KM to Feets
+      document.getElementById("outputFeet").innerHTML = valNum * 3280.8;
+      // 2 KM to Meters
+      document.getElementById("outputMeters").innerHTML = valNum * 1000;
+      // 3 KM to Inches
+      document.getElementById("outputInches").innerHTML = valNum * 39370;
+      // 4 KM to cm
+      document.getElementById("outputcm").innerHTML = valNum * 100000;
+      // 5 KM to Yards
+      document.getElementById("outputYards").innerHTML = valNum * 1093.6;
+      // 6 KM to Miles
+      document.getElementById("outputMiles").innerHTML = valNum * 0.62137;
+    } else if (unitType === "miles") {
+      // Miles to other Units
+      // 1 Miles to Feets
+      document.getElementById("outputFeet").innerHTML = valNum * 5280;
+      // 2 Miles to Meters
+      document.getElementById("outputMeters").innerHTML =
+        valNum / 0.00062137;
+      // 3 Miles to Inches
+      document.getElementById("outputInches").innerHTML = valNum * 63360;
+      // 4 Mile to cm
+      document.getElementById("outputcm").innerHTML = valNum / 0.0000062137;
+      // 5 Miles to Yards
+      document.getElementById("outputYards").innerHTML = valNum * 1760;
+      // 6 Miles to KM
+      document.getElementById("outputKilometers").innerHTML =
+        valNum / 0.62137;
+    }
+  }
+
+</script>

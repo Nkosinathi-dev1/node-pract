@@ -107,7 +107,7 @@ function App() {
                 placeholder='Please enter your height in meters...' 
                 value={valNum}
                 onChange={(event)=>{setVal(event.target.value);
-                setHeight(event.target.value)} }
+                setHeight(event.target.value); avgMeters()} }
             
             />
             </label>
@@ -134,7 +134,7 @@ function App() {
           
           
           <input type='submit' 
-                  onMouseEnter={avgMeters} 
+                  // onMouseEnter={avgMeters} 
                   onClick={createUser}
                   />
         </section>

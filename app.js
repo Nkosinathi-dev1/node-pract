@@ -9,13 +9,13 @@
 // let transporter=nodemailer.createTransport({
 //     service: 'gmail',
 //     auth:{
-//         user:'nkosinathidev2022@gmail.com',
-//         pass:'Tuki2020'
+//         user:EMAIL,
+//         pass:'PASSWORD'
 //     }
 // })
 
-// let senderEmail='nkosinathidev2022@gmail.com';
-// let recieverEmail='nkosinathi.ngele.dev@gmail.com';
+// let senderEmail='EMAIL';
+// let recieverEmail='EMAIL_RECIEVER;
 // let heightInMeters=5;
 // let emailText="LLLL"
 
